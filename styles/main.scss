@@ -1,0 +1,97 @@
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+body {
+    font-family: 'Lekton', sans-serif;
+}
+
+.remark-slide-content {
+    font-size: initial;
+    b, strong{
+      color:$highlight;
+    }
+    @include layout($light);
+    .remark-slide-number {
+        bottom: 0px;
+        right: 3%;
+    }
+    ul {
+        list-style-type: none;
+        li {
+            text-indent: -5px;
+            &:before {
+              content: "- ";
+              text-indent: -5px;
+            }
+        }
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-weight: 300;
+        margin-top: 10px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    h3 {
+        font-size: 1.0rem;
+        margin-bottom: 0;
+    }
+    h4 {
+        font-size: 0.8rem;
+    }
+    blockquote {
+        border-left: .25em solid #dfe2e5;
+        padding: 0 1em;
+        text-align: left;
+        margin-inline-start:0;
+    }
+    .footnote {
+        position: absolute;
+        bottom: 3em;
+    }
+    .red {
+        color: $highlight;
+    }
+    .html.remark-inline-code{
+        color:$danger;
+    }
+    
+}
+
+.dark {
+    @include layout($dark);
+}
+
+h1,
+h2 {
+    line-height: 0.6em;
+}
+
+a {
+    color: $link;
+    text-decoration: none;
+    font-weight: bold;
+}
+table {
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    border: 1px solid red;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    > * {
+        margin-left: auto;
+        margin-right: auto;  
+    }
+  }
