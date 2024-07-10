@@ -4,6 +4,11 @@ class: dark middle
 > An introduction
 
 ---
+### Before we start
+# Installations
+Download and install [.NET 8](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.303-windows-x64-installer)
+
+---
 # .NET Overview
 <br/>
 <br/>
@@ -130,13 +135,70 @@ name:blazor-wasm
 
 ---
 class: dark middle
+# Integration
+> Blazor in Exquise
+
+---
+### Integration
+# Client side
+
+- Blazor can be integrated in WPF applications.
+- Using WebView2, a Chromium based browser control.
+- WPF knows **nothing** about Blazor.
+- Blazor knows **nothing** about WPF.
+- Access and ID tokens are passed from WPF to Blazor WebView2 via LocalStorage.
+- Every component can be swapped out to become a new web component.
+
+<img src="images/exquise-wpf.svg" width="75%" class="center">
+
+---
+### Client side
+# Parostatus
+<br/>
+<br/>
+<img src="images/parostatus-wpf.png" width="100%" class="center">
+> Example of Parostatus running inside WPF using Blazor.
+
+
+---
+### Integration
+# Modularity
+- Each "feature" is a separate Blazor project, hosted online as static files.
+- Each team can be responsible for their own feature.
+- Each feature can be updated independently.
+
+<img src="images/modular.svg" width="75%" class="center">
+
+---
+### Integration
+# Back-end
+
+- WPF knows **nothing** about Blazor.
+- Blazor knows **nothing** about WPF.
+- No new API calls need to be developed.
+- A C# Client SDK is being developed to call the original Exquise API's from C#.
+    - Basically a HtppClient Wrapper to call the API's.
+
+<img src="images/back-end.svg" width="75%" class="center">
+
+
+---
+### Client SDK
+# Example Code
+<br/>
+<br/>
+<img src="images/code-example-client-sdk.png" width="100%" class="center">
+> A Blazor Component calling the Client SDK to get a list of via the API.
+
+---
+class: dark middle
 # Pracitical
 > Blazor **W**eb **As**se**m**bly Standalone
 
 ---
 ### Hello Blazor
 # Getting Started
-We won't be using Blazor Server or Interactive mode in this workshop. We will be using Blazor Standalone. Since this is what we use in Exquise for obvious reasons.
+We won't be using Blazor Server or Interactive mode in this workshop. We will be using Blazor Standalone (WASM). Since this is what we use in Exquise.
 
 <sup class="right">Terminal</sup>
 
@@ -159,13 +221,15 @@ Some notable files are:
     - Some example pages
 
 ---
+### Hello Blazor
+# TODO's
+What we're building:
+<br/>
+<br/>
+<img src="https://learn.microsoft.com/en-gb/training/aspnetcore/build-blazor-todo-list/media/todo-complete.png" width="75%" class="center">
+
+---
 ### Workshop
 # Pizza
 1. Install dotnet 6.0.423 by downloading [this file](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-6.0.423-windows-x64-installer) and going through the wizard.
-
-2. Clone the repository by running the following command in the terminal.
-<sup class="right">Terminal</sup>
-
-```
-git clone https://github.com/dotnet-presentations/blazor-workshop.git
-```
+2. Go to the this link to start the [Blazor Workshop](https://github.com/dotnet-presentations/blazor-workshop)
